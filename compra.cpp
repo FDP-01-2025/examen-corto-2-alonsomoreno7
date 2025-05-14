@@ -4,6 +4,7 @@ using namespace std;
 
 int main(){
 
+    //Creamos las variables
     float saldo = 1000, restante = 0, precioBasica = 900, table= 600,Chromebook=700, laptop=1500,Tablet=1200, estacion= 2000;
     int edad = 0, categoria = 0 ,categoriaEstudiante = 0 ,categoriaProfesional = 0;
 
@@ -53,10 +54,12 @@ int main(){
          //compra de laptop y verificacion de saldo disponible
             cout <<"Usted ha Seleccionado la Laptop Basica se verificara si tiene saldo suficiente..... " <<"\n";
 
+            //En caso que no haya plata disponible 
             if(precioBasica > saldo){
             cout <<"No tiene suficiente fondo ahorre mas xd"  <<"\n";
             }
             else
+            //En caso que haya plata disponible 
             {
             cout <<"Compra exitosa de Laptop Basica. Buen dia"  <<"\n";
             cout <<"Su saldo actual es de: " << restante <<"\n";
