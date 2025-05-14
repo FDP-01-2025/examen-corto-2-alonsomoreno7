@@ -5,8 +5,9 @@ using namespace std;
 int main(){
 
     //Creamos las variables
-    float saldo = 1000, restante = 0, precioBasica = 900, table= 600,Chromebook=700, laptop=1500,Tablet=1200, estacion= 2000;
-    int edad = 0, categoria = 0 ,categoriaEstudiante = 0 ,categoriaProfesional = 0;
+    float saldo, precioBasica = 900, table= 600,Chromebook=700, laptop=1500,Tablet=1200, estacion= 2000;
+    int restante, faltante;
+    int edad, categoria,categoriaEstudiante,categoriaProfesional;
 
     //Mensaje de bienvenida al usuario al programa 
     cout <<" Bienvenido porfavor proposiciones su edad para poder continuar :D : " <<"\n";
@@ -56,7 +57,8 @@ int main(){
 
             //En caso que no haya plata disponible 
             if(precioBasica > saldo){
-            cout <<"No tiene suficiente fondo ahorre mas xd"  <<"\n";
+            cout <<"No tiene suficiente fondo ahorre mas xd. "  <<"\n";
+
             }
             else
             //En caso que haya plata disponible 
@@ -71,10 +73,12 @@ int main(){
         //compra de Tablet y verificacion de saldo disponible
         cout <<"Usted ha  Seleccionado la Tablet Estudiantil se verificara si tiene saldo suficiente..... "  <<"\n";
 
+         //En caso que no haya plata disponible 
             if(table > saldo){
             cout <<"No tiene suficiente fondo ahorre mas xd"  <<"\n";
             }
             else
+             //En caso que haya plata disponible 
             {
             cout <<"Compra exitosa de la Tablet Estudiantil. Buen dia"  <<"\n";
             cout <<"Su saldo actual es de: " << restante <<"\n";
@@ -84,10 +88,12 @@ int main(){
         case 3:
          //compra de Chromebook
         cout <<"Usted ha  Seleccionado la  Chromebook se verificara si tiene saldo suficiente..... "  <<"\n";
+        //En caso que no haya plata disponible 
         if(Chromebook > saldo){
             cout <<"No tiene suficiente fondo ahorre mas xd"  <<"\n";
-            }
-            else
+        }
+        ///En caso que haya plata disponible  
+        else
             {
             cout <<"Compra exitosa de la Chromebook . Buen dia"  <<"\n";
             cout <<"Su saldo actual es de: " << restante <<"\n";
@@ -127,10 +133,12 @@ int main(){
        
           //Compra de Estación de Trabajo y verificacion de saldo disponible
           cout <<"Usted ha Seleccionado la Laptop Avanzada se verificara si tiene saldo suficiente..... " <<"\n";
-
+          //En caso que no haya plata disponible 
           if(laptop > saldo){
-          cout <<"No tiene suficiente fondo ahorre mas xd"  <<"\n";
+          cout <<"No tiene suficiente fondo ahorre mas xd. Le falta: " << faltante <<"\n";
+            faltante = 1000 - 1500;
           }
+          //En caso que  haya plata disponible 
           else
           {
           cout <<"Compra exitosa de la Laptop Avanzada. Buen dia"  <<"\n";
@@ -145,7 +153,8 @@ int main(){
         // Se verifica si hay saldo disponible 
         if(Tablet > saldo){
             //En caso que no haya saldo disponible
-        cout <<"No tiene suficiente fondo ahorre mas xd"  <<"\n";
+         cout <<"No tiene suficiente fondo ahorre mas xd. Le falta: " << faltante <<"\n";
+        faltante = 1000 - 1200;
         }
         else
         {
@@ -156,13 +165,14 @@ int main(){
         }
         break;
         case 3:
-         //Compra de Tablet Pro y verificacion de saldo disponible
-         cout <<"Usted ha  Seleccionado la Tablet Pro se verificara si tiene saldo suficiente..... " <<"\n";
+         //Compra de Estación de Trabajo y verificacion de saldo disponible
+         cout <<"Usted ha seleccionado la Estación de trabajo se verificara si tiene saldo suficiente..... " <<"\n";
 
          // Se verifica si hay saldo disponible 
          if(estacion > saldo){
              //En caso que no haya saldo disponible
-         cout <<"No tiene suficiente fondo ahorre mas xd"  <<"\n";
+             cout <<"No tiene suficiente fondo ahorre mas xd.Le falta: " << faltante <<"\n";
+             faltante = 2000 - 2000;
          }
          else
          {
